@@ -97,3 +97,19 @@ List<String> OptionsListWomensApparel = [
   'Coats',
   'Sweaters',
 ];
+//RecentlyViewdList Items data
+List<String> RecentlyViewListItemImages = [
+  'images/scarf.png',
+  'images/bag.png',
+  'images/shoes.png',
+];
+List<String> RecentlyViewListItemtitles = [
+  'Red Cotton Scarf',
+  'Battle Green Bag',
+  'Ladies Shoes',
+];
+List<String> RecentlyViewListItemPrices = [
+  '11.00',
+  '24.58',
+  '19.99',
+];
