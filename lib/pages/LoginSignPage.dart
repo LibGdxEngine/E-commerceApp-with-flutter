@@ -161,8 +161,8 @@ class _LoginSignPageState extends State<LoginSignPage> {
               child: Container(
                 height: 50,
                 decoration: BoxDecoration(
-                    color: Colors.red,
-                    border: Border.all(color: Colors.red, width: 1),
+                    color: Colors.blue,
+                    border: Border.all(color: Colors.blue, width: 1),
                     borderRadius: BorderRadius.all(Radius.circular(25))),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -179,7 +179,7 @@ class _LoginSignPageState extends State<LoginSignPage> {
                       backgroundColor: Colors.white,
                       child: Icon(
                         Icons.arrow_forward_ios,
-                        color: Colors.red,
+                        color: Colors.blue,
                       ),
                     ),
                     SizedBox(
@@ -195,22 +195,24 @@ class _LoginSignPageState extends State<LoginSignPage> {
           ),
           Container(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 RichText(
                   text: TextSpan(
-                    text: "By creating an account you agree on \n  ",
-                    style: TextStyle(color: Colors.black, fontSize: 12),
+                    text: "By creating an account you agree on \n",
+                    style: TextStyle(color: Colors.black, fontSize: 13),
                     children: <TextSpan>[
                       TextSpan(
-                          text: 'Terms of service ',
-                          style: TextStyle(color: Colors.red, fontSize: 12)),
+                          text: 'Terms of service',
+                          style: TextStyle(color: Colors.blue, fontSize: 13)),
                       TextSpan(
                         text: ' and ',
-                        style: TextStyle(color: Colors.black, fontSize: 12),
+                        style: TextStyle(color: Colors.black, fontSize: 13),
                       ),
                       TextSpan(
-                        text: ' Privacy Policy',
-                        style: TextStyle(color: Colors.red, fontSize: 12),
+                        text: 'Privacy Policy',
+                        style: TextStyle(color: Colors.blue, fontSize: 13),
                       ),
                     ],
                   ),
@@ -333,8 +335,8 @@ class _LoginSignPageState extends State<LoginSignPage> {
               child: Container(
                 height: 50,
                 decoration: BoxDecoration(
-                    color: Colors.red,
-                    border: Border.all(color: Colors.red, width: 1),
+                    color: Colors.blue,
+                    border: Border.all(color: Colors.blue, width: 1),
                     borderRadius: BorderRadius.all(Radius.circular(25))),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -351,7 +353,7 @@ class _LoginSignPageState extends State<LoginSignPage> {
                       backgroundColor: Colors.white,
                       child: Icon(
                         Icons.arrow_forward_ios,
-                        color: Colors.red,
+                        color: Colors.blue,
                       ),
                     ),
                     SizedBox(
@@ -375,7 +377,7 @@ class _LoginSignPageState extends State<LoginSignPage> {
                     children: <TextSpan>[
                       TextSpan(
                           text: 'Create a new account',
-                          style: TextStyle(color: Colors.red, fontSize: 14)),
+                          style: TextStyle(color: Colors.blue, fontSize: 14)),
                     ],
                   ),
                 )
@@ -496,8 +498,8 @@ class _LoginSignPageState extends State<LoginSignPage> {
             child: Container(
               height: 50,
               decoration: BoxDecoration(
-                  color: Colors.red,
-                  border: Border.all(color: Colors.red, width: 1),
+                  color: Colors.blue,
+                  border: Border.all(color: Colors.blue, width: 1),
                   borderRadius: BorderRadius.all(Radius.circular(25))),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -514,7 +516,7 @@ class _LoginSignPageState extends State<LoginSignPage> {
                     backgroundColor: Colors.white,
                     child: Icon(
                       Icons.arrow_forward_ios,
-                      color: Colors.red,
+                      color: Colors.blue,
                     ),
                   ),
                   SizedBox(

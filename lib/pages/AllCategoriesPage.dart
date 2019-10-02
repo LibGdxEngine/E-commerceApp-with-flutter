@@ -29,12 +29,19 @@ class _AllCategoriesPageState extends State<AllCategoriesPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      Container(
-                        child: FlatButton(
-                          child: Icon(
-                            Icons.clear,
-                            color: Colors.red,
-                            size: 35,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(
+                            context,
+                          );
+                        },
+                        child: Container(
+                          child: FlatButton(
+                            child: Icon(
+                              Icons.clear,
+                              color: Colors.red,
+                              size: 35,
+                            ),
                           ),
                         ),
                       ),

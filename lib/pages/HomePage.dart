@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/pages/Home.dart';
 import 'package:e_commerce_app/pages/Search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> pages = [HomeContent(goToOtherPage), SearchContent()];
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -48,7 +50,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.grey[200],
         //=======================================
 
-        body: Search(),
+        body: pages[currentTabIndex],
 
         //=======================================
         bottomNavigationBar: BottomNavigationBar(
@@ -72,7 +74,7 @@ class _HomePageState extends State<HomePage> {
             });
           },
           currentIndex: currentTabIndex,
-          selectedItemColor: Colors.red[500],
+          selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.black54,
           elevation: 0.0,
           showUnselectedLabels: true,

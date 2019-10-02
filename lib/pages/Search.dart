@@ -1,14 +1,15 @@
 import 'package:e_commerce_app/Data/constData.dart';
+import 'package:e_commerce_app/pages/SearchResult.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class Search extends StatefulWidget {
+class SearchContent extends StatefulWidget {
   @override
-  _SearchState createState() => _SearchState();
+  _SearchContentState createState() => _SearchContentState();
 }
 
-class _SearchState extends State<Search> {
+class _SearchContentState extends State<SearchContent> {
   String results = "";
   final TextEditingController controller = TextEditingController();
   FocusNode focusNode;
@@ -53,7 +54,7 @@ class _SearchState extends State<Search> {
                       'CLEAR',
                       style: TextStyle(
                         fontSize: 15,
-                        color: Colors.red[500],
+                        color: Colors.blue[500],
                       ),
                     ),
                   ),
@@ -95,7 +96,7 @@ class _SearchState extends State<Search> {
                           'REFRESH',
                           style: TextStyle(
                             fontSize: 15,
-                            color: Colors.red[500],
+                            color: Colors.blue[500],
                           ),
                         ),
                       ),
@@ -192,6 +193,14 @@ class _SearchState extends State<Search> {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Container(
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          border: Border.all(color: Colors.transparent),
+          borderRadius: BorderRadius.all(Radius.circular(60)),
+          boxShadow: [
+            BoxShadow(color: Colors.grey[300], spreadRadius: 1, blurRadius: 5)
+          ],
+        ),
         width: width,
 //        height: 45,
         child: TextField(
@@ -204,6 +213,7 @@ class _SearchState extends State<Search> {
           ),
           cursorColor: Colors.black38,
           decoration: InputDecoration(
+            contentPadding: const EdgeInsets.symmetric(vertical: 5.0),
             filled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(60.0)),
@@ -229,6 +239,10 @@ class _SearchState extends State<Search> {
               results = results + "\n" + str;
               controller.text = "";
               print(results);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SearchResultContent()),
+              );
             });
           },
           focusNode: focusNode,
