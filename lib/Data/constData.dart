@@ -113,3 +113,36 @@ List<String> RecentlyViewListItemPrices = [
   '24.58',
   '19.99',
 ];
+//Search Result Items Data
+List<String> SearchItemsResultsImages = [
+  'images/searchitem1.png',
+  'images/searchitem2.png',
+  'images/searchitem3.png',
+  'images/searchitem4.png',
+  'images/searchitem5.png',
+  'images/searchitem6.png',
+];
+List<String> SearchItemsResultsTitles = [
+  'V Neck Shirt-Lime',
+  'Round Neck Shirt',
+  'V Neck Polo-Shirt',
+  'V Neck Shirt-grey',
+  'Classic shirt',
+  'V Neck Shirt-Pink',
+];
+List<String> SearchItemsResultsPrices = [
+  '24.99',
+  '24.99',
+  '24.99',
+  '24.99',
+  '24.99',
+  '24.99',
+];
+List<String> SearchItemsResultsRates = [
+  '4.9',
+  '4.1',
+  '4.5',
+  '4.8',
+  '4.9',
+  '4.9'
+];

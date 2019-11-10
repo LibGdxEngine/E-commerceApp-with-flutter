@@ -2,7 +2,6 @@ import 'package:e_commerce_app/pages/Home.dart';
 import 'package:e_commerce_app/pages/Search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'AllCategoriesPage.dart';
 
 class HomePage extends StatefulWidget {
