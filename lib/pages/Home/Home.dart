@@ -1,6 +1,8 @@
+import 'package:e_commerce_app/Data/constData.dart';
+import 'package:e_commerce_app/Style/Themes.dart';
+import 'package:e_commerce_app/pages/ProductItem/ProductDetailsPage.dart';
+import 'package:e_commerce_app/pages/ShopProfile/ShopProfile.dart';
 import 'package:flutter/material.dart';
-import 'package:new_ecommerce/Data/constData.dart';
-import 'package:new_ecommerce/Style/Themes.dart';
 
 Widget HomeContent(Function goToOtherPage) {
   return Container(
@@ -68,7 +70,8 @@ Widget HomeContent(Function goToOtherPage) {
             scrollDirection: Axis.horizontal,
             itemCount: 4,
             itemBuilder: (context, index) {
-              return LatestItem(LatestImages[index], LatestTexts[index]);
+              return LatestItem(
+                  LatestImages[index], LatestTexts[index], context);
             },
           ),
         ),
@@ -84,6 +87,7 @@ Widget HomeContent(Function goToOtherPage) {
                 ListItemImages[index],
                 ListItemTitles[index],
                 ListItemPrices[index],
+                context,
               );
             },
           ),
@@ -93,117 +97,131 @@ Widget HomeContent(Function goToOtherPage) {
   );
 }
 
-Widget ListItem(String image, String title, String price) {
+Widget ListItem(
+    String image, String title, String price, BuildContext context) {
   return Padding(
     padding: const EdgeInsets.only(left: 20, top: 20, bottom: 20, right: 0),
-    child: Container(
-      width: 120,
-      decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(
+    child: GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (_) => ProductsDetails()));
+      },
+      child: Container(
+        width: 120,
+        decoration: BoxDecoration(
             color: Colors.white,
-            width: 1,
-          ),
-          borderRadius: BorderRadius.all(Radius.circular(16))),
-      padding: EdgeInsets.only(left: 10, right: 0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Expanded(
-            child: Image.asset(
-              image,
+            border: Border.all(
+              color: Colors.white,
+              width: 1,
             ),
-          ),
-          Text(
-            title,
-            style: TextStyle(
-              fontWeight: FontWeight.normal,
-              fontSize: 18,
-              color: Colors.black38,
+            borderRadius: BorderRadius.all(Radius.circular(16))),
+        padding: EdgeInsets.only(left: 10, right: 0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Expanded(
+              child: Image.asset(
+                image,
+              ),
             ),
-            textAlign: TextAlign.start,
-          ),
-          Text(
-            '\$$price',
-            style: TextStyle(fontWeight: FontWeight.bold),
-            textAlign: TextAlign.start,
-          ),
-          SizedBox(
-            width: 20,
-            height: 10,
-          )
-        ],
+            Text(
+              title,
+              style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 18,
+                color: Colors.black38,
+              ),
+              textAlign: TextAlign.start,
+            ),
+            Text(
+              '\$$price',
+              style: TextStyle(fontWeight: FontWeight.bold),
+              textAlign: TextAlign.start,
+            ),
+            SizedBox(
+              width: 20,
+              height: 10,
+            )
+          ],
+        ),
       ),
     ),
   );
 }
 
-Widget LatestItem(String image, String txt) {
-  return Container(
-    padding: EdgeInsets.only(left: 0, right: 10, top: 20),
-    child: Stack(
-      children: <Widget>[
-        ClipRRect(
-          borderRadius: new BorderRadius.circular(16.0),
-          child: Image.asset(
-            image,
+Widget LatestItem(String image, String txt, BuildContext context) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (_) => ShopProfile()));
+    },
+    child: Container(
+      padding: EdgeInsets.only(left: 0, right: 10, top: 20),
+      child: Stack(
+        children: <Widget>[
+          ClipRRect(
+            borderRadius: new BorderRadius.circular(16.0),
+            child: Image.asset(
+              image,
+            ),
           ),
-        ),
-        Positioned(
-          top: 25,
-          left: 20,
-          child: Text(
-            txt,
-            style: TextStyle(
-                fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+          Positioned(
+            top: 25,
+            left: 20,
+            child: Text(
+              txt,
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
-        ),
-        Positioned(
-          top: 140,
-          left: 20,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 0, right: 35),
-            child: GestureDetector(
-              onTap: () {},
-              child: Container(
-                height: 45,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(color: Colors.white, width: 1),
-                    borderRadius: BorderRadius.all(Radius.circular(25))),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Text(
-                      'SEE MORE',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 14, color: Colors.black54),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    CircleAvatar(
-                      radius: 16,
-                      backgroundColor: Colors.red,
-                      child: Icon(
-                        Icons.arrow_forward_ios,
-                        color: Colors.white,
+          Positioned(
+            top: 140,
+            left: 20,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 0, right: 35),
+              child: GestureDetector(
+                onTap: () {},
+                child: Container(
+                  height: 45,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.white, width: 1),
+                      borderRadius: BorderRadius.all(Radius.circular(25))),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      SizedBox(
+                        width: 20,
                       ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                  ],
+                      Text(
+                        'SEE MORE',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 14, color: Colors.black54),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      CircleAvatar(
+                        radius: 16,
+                        backgroundColor: Colors.red,
+                        child: Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     ),
   );
 }

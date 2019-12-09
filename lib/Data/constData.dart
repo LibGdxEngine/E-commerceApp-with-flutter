@@ -146,3 +146,11 @@ List<String> SearchItemsResultsRates = [
   '4.9',
   '4.9'
 ];
+
+List<String> ProductDetailsItemImages = [
+  'images/shoes.png',
+  'images/shoes.png',
+  'images/shoes.png',
+  'images/shoes.png',
+  'images/shoes.png',
+];

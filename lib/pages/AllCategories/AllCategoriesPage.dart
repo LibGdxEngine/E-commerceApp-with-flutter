@@ -1,7 +1,7 @@
+import 'package:e_commerce_app/Data/constData.dart';
+import 'package:e_commerce_app/Style/Themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:new_ecommerce/Data/constData.dart';
-import 'package:new_ecommerce/Style/Themes.dart';
 
 class AllCategoriesPage extends StatefulWidget {
   @override

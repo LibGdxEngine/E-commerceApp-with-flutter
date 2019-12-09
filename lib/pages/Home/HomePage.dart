@@ -1,10 +1,11 @@
+import 'package:e_commerce_app/pages/ProductItem/ProductDetailsPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'AllCategoriesPage.dart';
+import '../AllCategories/AllCategoriesPage.dart';
+import '../Profile/ProfilePage.dart';
+import '../Search/Search.dart';
 import 'Home.dart';
-import 'ProfilePage.dart';
-import 'Search.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -26,7 +27,9 @@ class _HomePageState extends State<HomePage> {
     List<Widget> pages = [
       HomeContent(goToOtherPage),
       SearchContent(),
-      ProfilePage()
+      ProductsDetails(),
+      ProfilePage(),
+      Container(),
     ];
     return SafeArea(
       child: Scaffold(

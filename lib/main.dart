@@ -1,5 +1,5 @@
+import 'package:e_commerce_app/pages/LoginSignup/LoginSignPage.dart';
 import 'package:flutter/material.dart';
-import 'package:new_ecommerce/pages/LoginSignPage.dart';
 
 void main() => runApp(MyApp());
 

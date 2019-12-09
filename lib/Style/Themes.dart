@@ -13,17 +13,8 @@ BoxDecoration FirstListItemsInCategories = BoxDecoration(
     topLeft: Radius.circular(15),
   ),
 );
+
 BoxDecoration MidListItemsInCategories = BoxDecoration(
-//  border: Border(
-//    top: BorderSide(width: 1.0, color: Colors.red),
-//    left: BorderSide(width: 1.0, color: Colors.red),
-//    right: BorderSide(width: 1.0, color: Colors.red),
-//    bottom: BorderSide(width: 1.0, color: Colors.red),
-//  ),
-//  borderRadius: BorderRadius.only(
-//    topRight: Radius.circular(0),
-//    topLeft: Radius.circular(0),
-//  ),
   color: Colors.white,
   shape: BoxShape.rectangle,
 );

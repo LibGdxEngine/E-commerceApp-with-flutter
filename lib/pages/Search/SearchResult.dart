@@ -1,7 +1,7 @@
+import 'package:e_commerce_app/Data/constData.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:new_ecommerce/Data/constData.dart';
 
 class SearchResultContent extends StatefulWidget {
   @override
